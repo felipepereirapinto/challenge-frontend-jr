@@ -8,9 +8,12 @@ export default createGlobalStyle`
   }
 
   body {
+    background: #000000;
+    color: #FFFFFF;
+    
     font-size: 14px;
-    background: black;
-    color: #eee;
-    font-family: sans-serif;
+    font-family: Axiforma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 `
