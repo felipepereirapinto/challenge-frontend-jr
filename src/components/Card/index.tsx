@@ -26,7 +26,7 @@ const Container = styled.div`
     flex-direction: column;
 
     h2 {
-      /* text-align: center; */
+      text-align: center;
       font-size: 1.25rem;
     }
 
@@ -46,22 +46,29 @@ const Container = styled.div`
       font-weight: 300;
       color: white;
       background-color: transparent;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 `
 
+type CardProps = {
+  name: string,
+  description: string,
+}
 
-const Card: React.FC = () => {
+const Card: React.FC<CardProps> = ({ name, description }) => {
   return (
     <Container>
       <div className="details">
-        <h2 className="card-name">Homem-Aranha</h2>
-        <p className="card-description">
-          Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.
-        </p>
+        <h2 className="card-name">{name}</h2>
+        <p className="card-description">{description}</p>
 
         <button 
           className="open-card"
+          onClick={() => alert('open card')}
         >
           ver detalhes
         </button>

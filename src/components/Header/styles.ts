@@ -2,12 +2,13 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   height: 114px;
+  width: 100%;
   padding: 0 55px;
   background: black;
   border-bottom: 2px solid red;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   h1 {

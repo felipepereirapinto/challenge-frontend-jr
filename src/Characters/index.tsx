@@ -3,31 +3,37 @@ import React from 'react';
 import Header from '../components/Header';
 import Card from '../components/Card';
 
-// import { Container } from './styles';
-import styled from 'styled-components'
+import arrowRight from '../assets/arrow-right.png'
 
-const Container = styled.div`
-  height: 100vh;
-  color: white;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  border: 1px solid white;
-
-  h1 {
-    color: white;
-  }
-`
-
-
+import { Container } from './styles';
 
 const Characters: React.FC = () => {
   return (
     <Container>
       <Header/>
-      <Card/>
+      <div className="cards">
+        <Card 
+          name={'Homem-Aranha'}
+          description={'Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.'}
+        />
+
+        <Card 
+          name={'Wanda Maximoff'}
+          description={'Wanda Maximoff foi sequestrada da Sérvia e trazida para a Montanha Wundagore, base do Alto Evolucionário. Durante anos, ela e seu irmão gêmeo, Pietro, acreditavam que eram filhos de um casal de ciganos.'}
+        />
+
+        <Card 
+          name={'Thanos'}
+          description={"A lua Titã era governada por Mentor (A'Lars), quando então reinava paz e tecnologia. Mentor tinha dois filhos: Eros e Thanos.  Ao contrário do irmão, Thanos, era bem mais poderoso e almejava ainda mais."}
+        />
+        
+        <button
+          className='next-card'
+          onClick={() => alert('next card')}
+        >
+          <img src={arrowRight} alt="Próximo" />
+        </button>
+      </div>
     </Container>
   )
 }
