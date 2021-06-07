@@ -90,6 +90,10 @@ export const Form = styled.form`
     background-color: red;
     color: white;
     font-size: 1.75rem;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   span.register {
