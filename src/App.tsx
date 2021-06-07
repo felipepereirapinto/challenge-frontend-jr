@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle/>
-      {/* <Header/> */}
-      <Home/>
+      <Header/>
+      {/* <Home/> */}
       
     </div>
   );
